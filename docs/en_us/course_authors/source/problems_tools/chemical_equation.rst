@@ -1,17 +1,17 @@
 .. _Chemical Equation:
 
-**************************
+################################
 Chemical Equation Problem
-**************************
+################################
 
 The chemical equation problem type allows the student to enter text that represents a chemical equation into a text box. The LMS converts that text into a chemical equation below the text box. The grader evaluates the student's response by using a Python script that you create and embed in the problem.
 
 .. image:: ../Images/ChemicalEquationExample.png
  :alt: Image of a chemical equation response problem
 
-====================================
+************************************
 Create the Chemical Equation Problem
-====================================
+************************************
 
 Chemical equation problems use MathJax to create formulas. For more information about using MathJax in Studio, see :ref:`MathJax in Studio`.
 
@@ -23,9 +23,9 @@ To create the above chemical equation problem:
 #. In the component editor, paste the code from below.
 #. Click **Save**.
 
-
+==========================================
 Sample Chemical Equation Problem Code
--------------------------------------
+==========================================
 
 .. code-block:: xml
 
@@ -67,12 +67,13 @@ Sample Chemical Equation Problem Code
 
 .. _Chemical Equation Problem XML:
 
-=============================
+************************************
 Chemical Equation Problem XML
-=============================
+************************************
 
+============
 Template
---------
+============
 
 .. code-block:: xml
 
@@ -102,8 +103,10 @@ Template
    </solution>
   </problem>
 
+======
 Tags
-----
+======
+
 * ``<customresponse>``: Indicates that this problem has a custom response. 
 * ``<chemicalequationinput>``: Specifies that the answer to this problem is a chemical equation. 
 * ``<answer type=loncapa/python>``: Contains the Python script that grades the problem.

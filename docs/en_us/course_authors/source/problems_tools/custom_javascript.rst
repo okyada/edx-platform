@@ -1,8 +1,8 @@
-.. _JavaScript Problems:
+.. _Custom JavaScript:
 
-################################################
-Custom JavaScript Display and Grading Problems
-################################################
+###########################
+Custom JavaScript Problem
+###########################
 
 Custom JavaScript display and grading problems (also called *custom JavaScript problems*
 or *JS Input problems*) allow you to create a custom problem or tool that uses JavaScript
@@ -18,8 +18,9 @@ create your JS Input problem.
 .. image:: ../Images/JavaScriptInputExample.png
  :alt: Image of a JavaScript Input problem
 
+************************************************************
 Create a Custom JavaScript Display and Grading Problem
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+************************************************************
 
 #. Create your JavaScript application, and then upload all files associated with
    that application to the **Files & Uploads** page.
@@ -45,8 +46,9 @@ Create a Custom JavaScript Display and Grading Problem
    **Maximum Attempts** to a number larger than zero.
 #. Click **Save**.
 
+================================
 Re-create the Example Problem
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================
 
 To re-create the example problem above, you'll need the following files.
 
@@ -67,8 +69,9 @@ To download these files in a .zip archive, go to http://files.edx.org/JSInput.zi
 #. In the problem component editor, replace the example code with the code below.
 #. Click **Save.**
 
+================================
 JavaScript Input Problem Code
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================
 
 .. code-block:: xml
 
@@ -126,16 +129,17 @@ JavaScript Input Problem Code
 
 .. _JS Input Problem XML:
 
-=============================
+******************************
 JavaScript Input Problem XML 
-=============================
+******************************
 
 JSInput allows problem authors to turn stand-alone HTML files into problems that can be integrated into the edX platform. Since its aim is flexibility, it can be seen as the input and client-side equivalent of **CustomResponse**.
 
 A JSInput exercise creates an IFrame in a static HTML page, and passes the return value of author-specified functions to the enclosing response type (generally **CustomResponse**). JSInput can also store and retrieve state.
 
+========
 Template
---------
+========
 
 The following is the basic format of a JSInput problem:
 
@@ -167,9 +171,9 @@ height           Integer        No         `500`
 width            Integer        No         `400`
 ==============  ==============  =========  ==========
 
-
+========================
 Required Attributes
--------------------
+========================
 
 * **html_file**
 
@@ -190,8 +194,9 @@ Required Attributes
 
   .. important:: To make sure the student's latest answer is passed correctly, make sure that the **gradefn** function is not asynchronous. Additionally, make sure that the function returns promptly. Currently the student has no indication that her answer is being calculated or produced.
 
+========================
 Optional Attributes
--------------------
+========================
 
 * **set_statefn**
 

@@ -1,14 +1,12 @@
 .. _Problem Written in LaTeX:
 
+############################
 Problem Written in LaTeX
-------------------------
+############################
 
 .. warning:: This problem type is still a prototype and may not be supported in the future. By default, the ability to create these problems is not enabled in Studio. You must change the advanced settings in your course before you can create problems with LaTeX. Use this problem type with caution.
 
-If you have an problem that is already written in LaTeX, you can use
-this problem type to easily convert your code into XML. After you paste
-your code into the LaTeX editor, you'll only need to make a few minor
-adjustments. 
+If you have an problem that is already written in LaTeX, you can use this problem type to easily convert your code into XML. After you paste your code into the LaTeX editor, you'll only need to make a few minor adjustments. 
 
 .. note:: If you want to use LaTeX to typeset mathematical expressions
           in problems that you haven't yet written, use any of the other problem
@@ -19,8 +17,9 @@ adjustments.
 .. image:: ../Images/ProblemWrittenInLaTeX.png
  :alt: Image of a problem written in LaTeX
 
+************************************
 Create a Problem Written in LaTeX
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+************************************
 
 To create a problem written in LaTeX:
 

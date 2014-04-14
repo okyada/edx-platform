@@ -1,8 +1,8 @@
 .. _Protein Builder:
 
-************************
-Protex Protein Builder
-************************
+############################
+Protex Protein Builder Tool
+############################
 
 The Protex protein builder asks students to create specified protein shapes by stringing together amino acids. In the example below, the goal protein shape is a simple line. 
 
@@ -12,9 +12,9 @@ The Protex protein builder asks students to create specified protein shapes by s
 
 .. _Create the Protein Builder:
 
-==========================
-Create the Protein Builder
-==========================
+********************************
+Create the Protein Builder Tool
+********************************
 
 To create the protein builder:
 
@@ -25,9 +25,9 @@ To create the protein builder:
 
 .. _Protein Builder Code:
 
-=====================
-Protein Builder Code
-=====================
+*************************
+Protein Builder Tool Code
+*************************
 
 .. code-block:: xml
 

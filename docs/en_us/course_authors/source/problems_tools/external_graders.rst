@@ -1,7 +1,7 @@
-.. _Using External Graders:
+.. _External Grader:
 
 ###########################
-Using External Graders
+External Grader
 ###########################
 
 

@@ -1,18 +1,17 @@
-
 .. _Drag and Drop:
 
-=============
-Drag and Drop
-=============
+##########################
+Drag and Drop Problem
+##########################
 
-In drag and drop problems, students respond to a question by dragging
-text or objects to a specific location on an image.
+In drag and drop problems, students respond to a question by dragging text or objects to a specific location on an image.
 
 .. image:: ../Images/DragAndDropProblem.png
  :alt: Image of a drag and drop problem
 
+*********************************
 Create a Drag and Drop Problem
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*********************************
 
 To create a drag and drop problem, you'll need the following files:
 
@@ -61,12 +60,13 @@ To create the molecule editor that appears in the image above, you'll upload the
 
 .. _Drag and Drop Problem XML:
 
-=========================
+*********************************
 Drag and Drop Problem XML
-=========================
+*********************************
 
+========
 Template
---------
+========
 
 .. code-block:: xml
 
@@ -86,8 +86,9 @@ Template
     </solution>
   </problem>
 
+========
 Tags
-----
+========
 
 * ``<drag_and_drop_input/>``: Indicates the problem is a drag and drop problem.
 * ``<draggable/>``: Specifies a single object that a student will drag onto the base image.

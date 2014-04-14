@@ -1,27 +1,25 @@
-.. _Checkbox Problems:
+.. _Checkbox:
 
-################################
-Checkbox Problems
-################################
+##################
+Checkbox Problem
+##################
 
-In checkbox problems, the student selects one or more options from a
-list of possible answers. The student must select all the options that
-apply to answer the problem correctly. Each checkbox problem must have
-at least one correct answer.
+In checkbox problems, the student selects one or more options from a list of possible answers. The student must select all the options that apply to answer the problem correctly. Each checkbox problem must have at least one correct answer.
 
 .. image:: ../Images/CheckboxExample.png
  :alt: Image of a checkbox problem
 
-==========================
+****************************
 Create a Checkbox Problem
-==========================
+****************************
 
 You can create checkbox problems in the Simple Editor or in the Advanced Editor.
 
 .. note:: All problems must include labels for accessibility. The label generally includes the text of the main question in your problem. To add a label for a common problem, surround the text of the label with angle brackets pointed toward the text (>>*label text*<<).
 
+==================
 Simple Editor
--------------
+==================
 
 #. Under **Add New Component**, click **Problem**.
 #. In the **Select Problem Component Type** screen, click **Checkboxes** on the **Common Problem Types** tab.
@@ -64,8 +62,9 @@ following.
     (or other preventative measures) have fewer benefits than they actually do.
     [explanation]
 
+==================
 Advanced Editor
----------------
+==================
 
 To create this problem in the Advanced Editor, click the **Advanced** tab in the Problem component editor, and then replace the existing code with the following code.
 
@@ -94,12 +93,13 @@ To create this problem in the Advanced Editor, click the **Advanced** tab in the
 
 .. _Checkbox Problem XML:
 
-=============================
+****************************
 Checkbox Problem XML 
-=============================
+****************************
 
+============
 Template
---------
+============
 
 .. code-block:: xml
 
@@ -124,8 +124,9 @@ Template
   </choiceresponse>
   </problem>
 
+======
 Tags
-----
+======
 
 * ``<choiceresponse>`` (required): Specifies that the problem contains options for students to choose from.
 * ``<checkboxgroup>`` (required): Specifies that the problem is a checkbox problem.

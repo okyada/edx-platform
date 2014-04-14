@@ -170,8 +170,6 @@ The Advanced Editor
 The **Advanced Editor** opens a problem in XML. The Advanced Problem templates,
 such as the circuit schematic builder, open directly in the Advanced Editor.
 
-For more information about the XML for different problem types, see :ref:`Appendix E`.
-
 The following image shows the multiple choice problem above in the Advanced Editor
 instead of the Simple Editor.
 
@@ -770,54 +768,12 @@ Additionally, several different problem types use the following tags.
 
 
 
-.. _Tools:
-
-#############################
-Working with Tools
-#############################
-
-***************************
-Overview of Tools in Studio
-***************************
-
-In addition to text, images, and different types of problems, Studio allows you
-to add customized learning tools such as word clouds to your course.
-
-- :ref:`Full Screen Image`: The Full Screen Image tool allows a student to enlarge an image in the whole browser window. This is useful when the image contains a large amount of detail and text that is easier to view in context when enlarged.
-- :ref:`LTI Component`: LTI components allow you to add an external learning application or textbook to Studio.
-- :ref:`Word Cloud`: Word clouds arrange text that students enter - for example, in response to a question - into a colorful graphic that students can see.
-- :ref:`Zooming image`: Zooming images allow you to enlarge sections of an image so that students can see the section in detail.
-
-
-.. _Additional Tools:
-
-
-#############################
-Additional Tools
-#############################
-
-*************************
-Additional Tools Overview
-*************************
-
-Individual course teams frequently create tools and problem types that don't have templates in Studio. We want to make these tools available to all our course teams. 
-
-Below, we provide you with all the files and code that you need to create the following tools and problem types.
-
-* :ref:`Chemical Equation`
-* :ref:`Conditional Module`
-* :ref:`Gene Explorer`
-* :ref:`Interactive Periodic Table`
-* :ref:`Molecule Editor`
-* :ref:`Multiple Choice and Numerical Input`
-* :ref:`Polls`
-* :ref:`Protein Builder`
 
 
 
-################################
-Problem and Tool XML
-################################
+###########
+Problem XML
+###########
 
 
 

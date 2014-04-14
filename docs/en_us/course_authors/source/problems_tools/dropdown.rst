@@ -1,28 +1,25 @@
-.. _Dropdown Problems:
+.. _Dropdown:
 
-#################
-Dropdown Problems
-#################
+#####################
+Dropdown Problem
+#####################
 
-Dropdown problems allow the student to choose from a collection of
-answer options, presented as a dropdown list. Unlike multiple choice
-problems, whose answers are always visible directly below the question,
-dropdown problems don't show answer choices until the student clicks
-the dropdown arrow.
+Dropdown problems allow the student to choose from a collection of answer options, presented as a dropdown list. Unlike multiple choice problems, whose answers are always visible directly below the question, dropdown problems don't show answer choices until the student clicks the dropdown arrow.
 
 .. image:: ../Images/DropdownExample.png
  :alt: Image of a dropdown problem
 
-==========================
+********************************
 Create a Dropdown Problem
-==========================
+********************************
 
 You can create dropdown problems in the Simple Editor or in the Advanced Editor.
 
 .. note:: All problems must include labels for accessibility. The label generally includes the text of the main question in your problem. To add a label for a common problem, surround the text of the label with angle brackets pointed toward the text (>>*label text*<<).
 
+================
 Simple Editor
--------------
+================
 
 To create a dropdown problem, follow these steps.
 
@@ -65,8 +62,9 @@ following.
     Life stage - infant, child, and adult:
     [[(Nominal), Discrete, Continuous]]
 
+================
 Advanced Editor
----------------
+================
 
 To create this problem in the Advanced Editor, click the **Advanced** tab in the Problem component editor, and then replace the existing code with the following code.
 
@@ -95,12 +93,13 @@ To create this problem in the Advanced Editor, click the **Advanced** tab in the
 
 .. _Dropdown Problem XML:
 
-==========================
+************************
 Dropdown Problem XML
-==========================
+************************
 
+========
 Template
---------
+========
 
 .. code-block:: xml
 
@@ -136,8 +135,9 @@ Template
     </solution>
   </problem>
 
+========
 Tags
-----
+========
 
 * ``<optionresponse>`` (required): Indicates that the problem is a dropdown problem.
 * ``<optioninput>`` (required): Lists the answer options.

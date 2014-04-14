@@ -1,4 +1,4 @@
-.. _Math Problems:
+.. _Math:
 
 ########################
 Math Problems

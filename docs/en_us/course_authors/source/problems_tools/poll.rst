@@ -1,9 +1,9 @@
 
-.. _Polls:
+.. _Poll:
 
-******
-Polls
-******
+##########
+Poll Tool
+##########
 
 You can run polls in your course so that your students can share opinions on different questions.
 
@@ -11,9 +11,9 @@ You can run polls in your course so that your students can share opinions on dif
 
 .. note:: Creating a poll requires you to export your course, edit some of your course's XML files in a text editor, and then re-import your course. We recommend that you create a backup copy of your course before you create the poll. We also recommend that you only edit the files that will contain polls in the text editor if you're very familiar with editing XML. 
 
-===========
+**************
 Terminology
-===========
+**************
 
 Sections, subsections, units, and components have different names in the **Course Outline** view and in the list of files that you'll see after you export your course and open the .xml files for editing. The following table lists the names of these elements in the **Course Outline** view and in a list of files.
 
@@ -36,9 +36,9 @@ For example, when you want to find a specific section in your course, you'll loo
 
 .. _Create a Poll:
 
-=============
+**************
 Create a Poll
-=============
+**************
 
 #. In the unit where you want to create the poll, create components that contain all the content that you want *except* for the poll. Make a note of the 32-digit unit ID that appears in the **Unit Identifier** field under **Unit Location**.
 
@@ -105,9 +105,9 @@ Create a Poll
   
   * A .csv file that contains student responses to the problem is not currently available for polls. However, you can obtain the aggregate data directly in the problem.  
 
-==================
+*********************
 Format description
-==================
+*********************
 
 The main tag of Poll module input is:
 
@@ -118,8 +118,9 @@ The main tag of Poll module input is:
 ``poll_question`` can include any number of the following tags:
 any xml and ``answer`` tag. All inner xml, except for ``answer`` tags, we call "question".
 
+==================
 poll_question tag
------------------
+==================
 
 Xmodule for creating poll functionality - voting system. The following attributes can
 be specified for this tag::
@@ -128,9 +129,9 @@ be specified for this tag::
     [display_name| AUTOGENERATE] - Display name of xmodule. When this attribute is not defined - display name autogenerate with some hash.
     [reset | False] - Can reset/revote many time (value = True/False)
 
-
+============
 answer tag
-----------
+============
 
 Define one of the possible answer for poll module. The following attributes can
 be specified for this tag::
@@ -139,11 +140,13 @@ be specified for this tag::
 
 Inner text - Display text for answer choice.
 
+***********
 Example
-=======
+***********
 
-Examples of poll
-----------------
+==================
+Example of poll
+==================
 
 .. code-block:: xml
 
@@ -155,8 +158,9 @@ Examples of poll
         <answer id="more25">&gt; 25</answer>
     </poll_question>
 
-Examples of poll with unable reset functionality
-------------------------------------------------
+================================================
+Example of poll with unable reset functionality
+================================================
 
 .. code-block:: xml
 

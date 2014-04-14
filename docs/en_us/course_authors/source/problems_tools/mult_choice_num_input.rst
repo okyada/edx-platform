@@ -1,8 +1,8 @@
 .. _Multiple Choice and Numerical Input:
 
-*******************************************
+############################################
 Multiple Choice and Numerical Input Problem
-*******************************************
+############################################
 
 You can create a problem that combines a multiple choice and numerical input problems. Students not only select a response from options that you provide, but also provide more specific information, if necessary.
 
@@ -13,9 +13,9 @@ You can create a problem that combines a multiple choice and numerical input pro
 
 .. _Create an MCNA Problem:
 
-====================================================
+********************************************************
 Create a Multiple Choice and Numerical Input Problem
-====================================================
+********************************************************
 
 To create a multiple choice and numerical input problem:
 
@@ -28,9 +28,9 @@ To create a multiple choice and numerical input problem:
 
 .. _MCNA Problem Code:
 
-===================================================
+************************************************
 Multiple Choice and Numerical Input Problem Code
-===================================================
+************************************************
 
 .. code-block:: xml
 

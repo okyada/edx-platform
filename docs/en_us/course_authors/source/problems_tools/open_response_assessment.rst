@@ -1,7 +1,8 @@
-.. _Open Response Assessment Problems:
+.. _Open Response Assessment:
 
+#################################
 Open Response Assessment Problems
----------------------------------
+#################################
 
 Introduction to Open Response Assessments
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -10,16 +11,7 @@ Introduction to Open Response Assessments
           you test them thoroughly in a practice course and only add them to
           courses that are **not** already running.
 
-Open response assessments allow instructors to assess student learning
-through questions that may not have definite answers. Tens of thousands
-of students can receive feedback on written responses of varying lengths
-as well as files, such as computer code or images, that the students
-upload. Open response assessment technologies include self assessment,
-peer assessment, and artificial intelligence (AI) assessment (sometimes
-called "machine assessment" or "machine grading"). With self
-assessments, students learn by comparing their answers to a rubric that
-you create. With peer assessments, students compare their peers' answers
-to the rubric.
+Open response assessments allow instructors to assess student learning through questions that may not have definite answers. Tens of thousands of students can receive feedback on written responses of varying lengths as well as files, such as computer code or images, that the students upload. Open response assessment technologies include self assessment and peer assessment. With self assessments, students learn by comparing their answers to a rubric that you create. With peer assessments, students compare their peers' answers to the rubric.
 
 For more information, see the following:
 

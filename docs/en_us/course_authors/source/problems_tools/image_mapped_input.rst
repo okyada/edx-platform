@@ -1,18 +1,17 @@
-
 .. _Image Mapped Input:
 
-Image Mapped Input
-------------------
+###########################
+Image Mapped Input Problem
+###########################
 
-In an image mapped input problem, students click inside a defined area
-in an image. You define this area by including coordinates in the body
-of the problem.
+In an image mapped input problem, students click inside a defined area in an image. You define this area by including coordinates in the body of the problem.
 
 .. image:: ../Images/ImageMappedInputExample.png
  :alt: Image of an image mapped input problem
 
+****************************************
 Create an Image Mapped Input Problem
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+****************************************
 
 To create a image mapped input problem:
 
@@ -40,12 +39,13 @@ To create a image mapped input problem:
 
 .. _Image Mapped Input Problem XML:
 
-==============================
+******************************
 Image Mapped Input Problem XML 
-==============================
+******************************
 
+==========
 Template
---------
+==========
 
 .. code-block:: xml
 
@@ -58,8 +58,9 @@ Template
         </imageresponse>
   </problem>
 
+=====
 Tags
-----
+=====
 
 * ``<imageresponse>``: Indicates that the problem is an image mapped input problem.
 * ``<imageinput>``: Specifies the image file and the region in the file that the student must click.

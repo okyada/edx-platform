@@ -1,13 +1,15 @@
 .. _Full Screen Image:
 
-******************
-Full Screen Image
-******************
+######################
+Full Screen Image Tool
+######################
 
 Some large images are difficult for students to view in the courseware.  The full screen image tool allows students to enlarge the image, so they can see all the detail in context.
 
+****************************************
 The Student View of a Full Screen Image
------------------------------------------
+****************************************
+
 The student sees the full screen image in a unit page. When the student hovers the mouse pointer over the image, the **Fullscreen** button appears:
 
 .. image:: ../Images/image-modal.png
@@ -23,9 +25,9 @@ The student can then zoom in on the image, and drag the image to view the desire
 .. image:: ../Images/image-modeal-zoomed.png
  :alt: Image of the Image Modal tool with the Full Screen button.
 
-
+******************************
 Create a Full Screen Image
----------------------------
+******************************
 
 #. Upload your image file to the **Files & Uploads** page. For more information about how to do this, see :ref:`Add Files to a Course`.
 

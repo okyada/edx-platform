@@ -1,8 +1,8 @@
-.. _Interactive Periodic Table:
+.. _Periodic Table:
 
-**************************
-Interactive Periodic Table
-**************************
+#####################
+Periodic Table Tool
+#####################
 
 You can create an interactive periodic table of the elements to help your students learn about various elements' properties. In the table below, detailed information about each element appears as the student moves the mouse over the element.
 
@@ -11,9 +11,9 @@ You can create an interactive periodic table of the elements to help your studen
 
 .. _Create the Periodic Table:
 
-==========================
-Create the Periodic Table
-==========================
+******************************
+Create the Periodic Table Tool
+******************************
 
 To create a periodic table, you need the following files:
 

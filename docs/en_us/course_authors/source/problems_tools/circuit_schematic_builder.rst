@@ -1,19 +1,17 @@
 .. _Circuit Schematic Builder:
 
-##########################
-Circuit Schematic Builder
-##########################
+##################################
+Circuit Schematic Builder Problem
+##################################
 
-In circuit schematic builder problems, students can arrange circuit
-elements such as voltage sources, capacitors, resistors, and MOSFETs on
-an interactive grid. They then submit a DC, AC, or transient analysis of
-their circuit to the system for grading.
+In circuit schematic builder problems, students can arrange circuit elements such as voltage sources, capacitors, resistors, and MOSFETs on an interactive grid. They then submit a DC, AC, or transient analysis of their circuit to the system for grading.
 
 .. image:: ../Images/CircuitSchematicExample.png
  :alt: Image of a circuit schematic builder
 
+*********************************************
 Create a Circuit Schematic Builder Problem
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*********************************************
 
 #. In the unit where you want to create the problem, click **Problem**
    under **Add New Component**, and then click the **Advanced** tab.

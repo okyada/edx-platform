@@ -1,28 +1,25 @@
-.. _Multiple Choice Problems:
+.. _Multiple Choice:
 
 ########################
-Multiple Choice Problems
+Multiple Choice Problem
 ########################
 
-In multiple choice problems, students select one option from a list of
-answer options. Unlike with dropdown problems, whose answer choices
-don't appear until the student clicks the drop-down arrow, answer
-choices for multiple choice problems are always visible directly below
-the question.
+In multiple choice problems, students select one option from a list of answer options. Unlike with dropdown problems, whose answer choices don't appear until the student clicks the drop-down arrow, answer choices for multiple choice problems are always visible directly below the question.
 
 .. image:: ../Images/MultipleChoiceExample.png
  :alt: Image of a multiple choice problem
 
-==================================
+****************************************
 Create a Multiple Choice Problem
-==================================
+****************************************
 
 You can create multiple choice problems in the Simple Editor or in the Advanced Editor.
 
 .. note:: All problems must include labels for accessibility. The label generally includes the text of the main question in your problem. To add a label for a common problem, surround the text of the label with angle brackets pointed toward the text (>>*label text*<<).
 
+================
 Simple Editor
--------------
+================
 
 #. Under **Add New Component**, click **Problem**.
 #. In the **Select Problem Component Type** screen, click **Multiple
@@ -76,8 +73,9 @@ following.
     investigating lateral inhibition using horseshoe crabs.
     [Explanation]
 
+================
 Advanced Editor
----------------
+================
 
 To create this problem in the Advanced Editor, click the **Advanced** tab in the Problem component editor, and then replace the existing code with the following code.
 
@@ -104,12 +102,13 @@ To create this problem in the Advanced Editor, click the **Advanced** tab in the
 
 .. _Multiple Choice Problem XML:
 
-=============================
+******************************
 Multiple Choice Problem XML 
-=============================
+******************************
 
+================
 Template
---------
+================
 
 .. code-block:: xml
 
@@ -130,8 +129,9 @@ Template
   </solution>
   </problem>
 
+================
 Tags
-----
+================
 
 * ``<multiplechoiceresponse>`` (required): Indicates that the problem is a multiple choice problem.
 * ``<choicegroup>`` (required): Indicates the beginning of the list of options. 

@@ -1,31 +1,27 @@
-.. _Text Input Problems:
+.. _Text Input:
 
 ########################
-Text Input Problems
+Text Input Problem
 ########################
 
 
 
-In text input problems, students enter text into a response field. The
-response can include numbers, letters, and special characters such as
-punctuation marks. Because the text that the student enters must match
-the instructor's specified answer exactly, including spelling and
-punctuation, we recommend that you specify more than one attempt for
-text input problems to allow for typographical errors.
+In text input problems, students enter text into a response field. The response can include numbers, letters, and special characters such as punctuation marks. Because the text that the student enters must match the instructor's specified answer exactly, including spelling and punctuation, we recommend that you specify more than one attempt for text input problems to allow for typographical errors.
 
 .. image:: ../Images/TextInputExample.png
  :alt: Image of a text input probem
 
-==================================
+****************************
 Create a Text Input Problem
-==================================
+****************************
 
 You can create multiple choice problems in the Simple Editor or in the Advanced Editor.
 
 .. note:: All problems must include labels for accessibility. The label generally includes the text of the main question in your problem. To add a label for a common problem, surround the text of the label with angle brackets pointed toward the text (>>*label text*<<).
 
+==============
 Simple Editor
--------------
+==============
 
 To create a text input problem in the Simple Editor, follow these steps.
 
@@ -68,8 +64,9 @@ following.
     from the group (even when the group does not have 100% bednet coverage).
     [explanation]
 
+=====================
 Advanced Editor
----------------
+=====================
 
 To create this problem in the Advanced Editor, click the **Advanced** tab in the Problem component editor, and then replace the existing code with the following code.
 
@@ -110,17 +107,18 @@ To create this problem in the Advanced Editor, click the **Advanced** tab in the
 
 
 
-=========================================
+******************************************
 Multiple Responses in Text Input Problems
-=========================================
+******************************************
 
 You can specify more than one correct response for text input problems. 
 For example, instead of requiring students to enter exactly "Dr. Martin Luther 
 King, Junior," you can allow answers of "Martin Luther King," "Doctor Martin 
 Luther King," and other variations. To do this, you can use the Simple Editor or the Advanced Editor.
 
+==============
 Simple Editor
--------------
+==============
 
 To specify additional correct responses in the Simple Editor, include "or=" (without the quotation marks) before each additional correct response.
 
@@ -132,10 +130,9 @@ To specify additional correct responses in the Simple Editor, include "or=" (wit
     or= Martin Luther King, Jr.
     or= Martin Luther King
 
-
-
+=====================
 Advanced Editor
----------------
+=====================
 
 To specify additional correct responses in the Advanced Editor, add an ``<additional_answer>``  for each correct response inside the opening and closing ``<stringresponse>`` tags.
 
@@ -155,9 +152,9 @@ To specify additional correct responses in the Advanced Editor, add an ``<additi
   </problem>
 
 
-=========================================
+******************************************
 Case Sensitivity and Text Input Problems
-=========================================
+******************************************
 
 By default, text input problems do not require a case sensitive response. You can change this
 and require a case sensitive answer.
@@ -180,10 +177,10 @@ To make the response case sensitive, change the value of the **type** attribute 
     <stringresponse answer="Michigan" type="cs">
       <textline size="20"/>
     </stringresponse>
-    
-=============================================
+
+*************************************************
 Response Field Length of Text Input Problems
-=============================================
+*************************************************
 
 By default, the response field for text input problems is 20 characters long. 
 
@@ -208,9 +205,9 @@ To change the response field length, change the value of the **size** attribute:
       <textline size="40"/>
     </stringresponse>
 
-====================================================
+********************************************************
 Hints and Regular Expressions in Text Input Problems
-====================================================
+********************************************************
 
 You can provide hints that appear when students enter common incorrect answers in text input problems. You can also set a text input problem to allow a regular expression as an answer. To do this, you'll have to modify the problem's XML in the Advanced Editor. 
 
@@ -220,12 +217,13 @@ You can add ``regexp`` to the value of the ``type`` attribute, for example: ``ty
 
 .. _Text Input Problem XML:
 
-======================
+***********************
 Text Input Problem XML
-======================
+***********************
 
+==============
 Template
---------
+==============
 
 .. code-block:: xml
 
@@ -258,8 +256,9 @@ Template
     </solution>
   </problem>
 
+=======
 Tags
-----
+=======
 
 * ``<stringresponse>``: Indicates that the problem is a text input problem. 
 * ``<textline>``: Child of ``<stringresponse>``. Creates a response field in the LMS where the student enters a response.

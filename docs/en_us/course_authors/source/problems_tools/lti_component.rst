@@ -1,8 +1,8 @@
 .. _LTI Component:
 
-**************
-LTI Components
-**************
+###############
+LTI Component
+###############
 
 You may have discovered or developed an external learning application
 that you want to add to your online course. Or, you may have a digital
@@ -47,8 +47,9 @@ unit, you need the following information.
    provider. The launch URL is the URL that Studio sends to the external
    LTI provider so that the provider can send back students’ grades.
 
+************************
 Create an LTI Component
------------------------
+************************
 
 Creating an LTI component in your course has three steps.
 
@@ -56,8 +57,9 @@ Creating an LTI component in your course has three steps.
 #. Register the LTI provider.
 #. Create the LTI component in an individual unit.
 
+======================================================
 Step 1. Add LTI to the Advanced Modules Policy Key
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+======================================================
 
 #. On the **Settings** menu, click **Advanced Settings**.
 #. On the **Advanced Settings** page, locate the **Manual Policy
@@ -84,8 +86,9 @@ Step 1. Add LTI to the Advanced Modules Policy Key
 The page refreshes automatically. At the top of the page,
 you see a notification that your changes have been saved.
 
+==========================================
 Step 2. Register the External LTI Provider
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+==========================================
 
 To regiser the external LTI provider, you’ll add the LIT ID, the client
 key, and the client secret in the **lti_passports** policy key.
@@ -123,8 +126,9 @@ The page refreshes automatically. At the top of the page,
 you see a notification that your changes have been saved, and you can
 see your entries in the **lti_passports** policy key.
 
+==========================================
 Step 3. Add the LTI Component to a Unit
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+==========================================
 
 #. In the unit where you want to create the problem, click **Advanced**
    under **Add New Component**, and then click **LTI**.

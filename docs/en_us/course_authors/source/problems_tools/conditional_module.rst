@@ -1,12 +1,12 @@
 .. _Conditional Module:
 
-******************
+####################
 Conditional Module
-******************
+####################
 
-==================
+********************
 Format description
-==================
+********************
 
 The main tag of Conditional module input is:
 
@@ -16,8 +16,9 @@ The main tag of Conditional module input is:
 
 ``conditional`` can include any number of any xmodule tags (``html``, ``video``, ``poll``, etc.) or ``show`` tags.
 
+================
 conditional tag
----------------
+================
 
 The main container for a single instance of Conditional module. The following attributes can
 be specified for this tag::
@@ -33,20 +34,22 @@ be specified for this tag::
     [poll_answer] - map to `poll_answer` module attribute
     [voted] - map to `voted` module attribute
 
+========
 show tag
---------
+========
 
 Symlink to some set of xmodules. The following attributes can
 be specified for this tag::
 
     sources - location id of modules, separated by ';'
 
-=======
+*********
 Example
-=======
+*********
 
+========================================
 Examples of conditional depends on poll
--------------------------------------------
+========================================
 
 .. code-block:: xml
 
@@ -57,8 +60,9 @@ Examples of conditional depends on poll
         </html>
     </conditional>
 
+========================================================
 Examples of conditional depends on poll (use <show> tag)
---------------------------------------------------------
+========================================================
 
 .. code-block:: xml
 
@@ -69,8 +73,9 @@ Examples of conditional depends on poll (use <show> tag)
         </html>
     </conditional>
 
+================================================
 Examples of conditional depends on problem
--------------------------------------------
+================================================
 
 .. code-block:: xml
 

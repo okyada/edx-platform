@@ -1,28 +1,25 @@
-******************
+##################
 Format cheat sheet
-******************
+##################
 
-Levels of Subheads
+Title: # above and below (as lines 1 and 3 above)
 
-####
-text
-####
+*********
+Heading 1
+*********
 
-****
-text
-****
+=========
+Heading 2
+=========
 
-text
-****
+Heading 3
+*********
 
 text
 ====
 
 text
 ^^^^
-
-
-
 
 
 
@@ -46,6 +43,20 @@ To set text in a "Code format"
 .. code-block:: xml
 
 (text in code-block:: xml is in different colors)
+
+Tables:
+
+.. list-table::
+   :widths: 10 80
+   :header-rows: 1
+
+   * - Header cell 1
+     - Header cell 2
+   * - Row 1 cell 1
+     - Row 1 cell 2
+   * - Row 2 cell 1
+     - Row 2 cell 2
+
 
 To cross reference between sections of a document
 

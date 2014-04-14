@@ -1,12 +1,11 @@
-
 .. _Word Cloud:
 
-**********
-Word Cloud
-**********
+##################
+Word Cloud Tool
+##################
 
 
-In a word cloud exercise, students enter words into a field in response
+In a word cloud tool, students enter words into a field in response
 to a question or prompt. The words all the students have entered then
 appear instantly as a colorful graphic, with the most popular responses
 appearing largest. The graphic becomes larger as more students answer.
@@ -20,15 +19,15 @@ responses to a question in a HarvardX course.
 .. image:: ../Images/WordCloudExample.png
   :alt: Image of a word cloud problem
 
-Create a Word Cloud Exercise
-----------------------------
+****************************
+Create a Word Cloud Tool
+****************************
 
-To create a word cloud exercise:
+To create a word cloud tool:
 
 
 #. Add the Word Cloud advanced component. To do this, add the
-   "word_cloud" key value to the **Advanced Settings** page. (For more
-   information, see the instructions in :ref:`Specialized Problems`.)
+   "word_cloud" key value to the **Advanced Settings** page. 
    
 #. In the unit where you want to create the problem, click **Advanced**
    under **Add New Component**.
@@ -52,7 +51,3 @@ To create a word cloud exercise:
 
 
 #. Click **Save**.
-
-
-For more information, see `Xml Format of "Word Cloud" Module
-<https://edx.readthedocs.org/en/latest/course_data_formats/word_cloud/word_cloud.html#>`_.

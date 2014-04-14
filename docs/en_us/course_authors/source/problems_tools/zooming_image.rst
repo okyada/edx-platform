@@ -1,16 +1,17 @@
 .. _Zooming Image:
 
-******************
+##################
 Zooming Image Tool
-******************
+##################
 
 You may want to present information to your students as an image. If your image is very large or very detailed, students may not be able to see all the information in the image. You can use the zooming image tool to enlarge areas of your image as the student moves the mouse over the image, as in the example below.
 
 .. image:: ../Images/Zooming_Image.png
   :alt: Example zooming image tool showing a chemistry exercise
 
+***********************************
 Components of a Zooming Image Tool
-----------------------------------
+***********************************
 
 To create a zooming image tool, you need the following files.
 
@@ -18,8 +19,9 @@ To create a zooming image tool, you need the following files.
 * The image that appears in the magnified area when a student clicks the regular image. This image may be larger than the regular image.
 * The **jquery.loupeAndLightbox.js** JavaScript file. Every zooming image tool uses this JavaScript file, and you won't make any changes to it. `To download this file, right-click here <http://files.edx.org/jquery.loupeAndLightbox.js>`_, and then click **Save Link As** to save the file on your computer.
 
+****************************
 Create a Zooming Image Tool
----------------------------
+****************************
 
 #. Upload your regular-sized image file, your small image file, and the **jquery.loupeAndLightbox.js** file to the **Files & Uploads** page. For more information about how to do this, see :ref:`Add Files to a Course`.
 

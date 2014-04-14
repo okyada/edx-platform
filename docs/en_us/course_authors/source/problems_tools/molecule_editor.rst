@@ -1,8 +1,8 @@
 .. _Molecule Editor:
 
-************************
-Molecule Editor
-************************
+#######################
+Molecule Editor Tool
+#######################
 
 Students can use the molecule editor to learn how to create molecules. The molecule editor allows students to draw molecules that follow the rules for covalent bond formation and formal charge, even if the molecules are chemically impossible, are unstable, or do not exist in living systems. The molecule editor warns students if they try to submit a structure that is chemically impossible.
 
@@ -13,9 +13,9 @@ The molecule editor incorporates two tools: the JSME molecule editor created by 
 
 .. _Create the Molecule Editor:
 
-==========================
+******************************
 Create the Molecule Editor
-==========================
+******************************
 
 To create a molecule editor, you need the following files:
 
@@ -46,14 +46,14 @@ To create the molecule editor that appears in the image above, you need an HTML 
 
 .. _EMC Problem Code:
 
-=====================
+========================
 Molecule Editor Code
-=====================
+========================
 
 To create the molecule editor, you need an HTML component and a Problem component.
 
 HTML Component Code
--------------------
+***************************
 
 .. code-block:: xml
 
@@ -102,7 +102,8 @@ HTML Component Code
 
 
 Problem Component Code
-----------------------
+***************************
+
 .. code-block:: xml
 
   <problem>

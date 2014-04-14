@@ -1,7 +1,7 @@
-.. _Using an Instant Hangout in Your Course:
+.. _Google Instant Hangout:
 
 ###########################################
-Using an Instant Hangout in Your Course
+Google Instant Hangout Tool
 ###########################################
 
 This chapter describes how you can use instant hangouts in your course. See:

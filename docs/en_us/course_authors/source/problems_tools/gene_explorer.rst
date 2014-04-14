@@ -1,8 +1,8 @@
 .. _Gene Explorer:
 
-**************************
-Gene Explorer
-**************************
+##################
+Gene Explorer Tool
+##################
 
 The Gene Explorer (GeneX), from the biology department at `UMB <http://www.umb.edu/>`_, simulates the transcription, splicing, processing, and translation of a small hypothetical eukaryotic gene. GeneX allows students to make specific mutations in a gene sequence, and it then calculates and displays the effects of the mutations on the mRNA and protein. 
 
@@ -20,9 +20,9 @@ Specifically, the Gene Explorer does the following:
 
 For more information about the Gene Explorer, see `The Gene Explorer <http://intro.bio.umb.edu/GX/>`_.
 
-=====================
+********************
 Gene Explorer Code
-=====================
+********************
 
 ::
 

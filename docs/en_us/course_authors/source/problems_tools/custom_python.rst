@@ -1,10 +1,8 @@
 .. _Custom Python Evaluated Input:
 
-=======================================================
-Custom Python-Evaluated Input ("Write-Your-Own-Grader")
-=======================================================
-
-
+##############################
+Write-Your-Own-Grader Problem
+##############################
 
 In custom Python-evaluated input (also called "write-your-own-grader problems" problems), the grader uses a Python script that you create and embed in the problem to evaluates a student's response or provide hints. These problems can be any type. Numerical input and text input problems are the most popular write-your-own-grader problems.
 
@@ -14,7 +12,7 @@ In custom Python-evaluated input (also called "write-your-own-grader problems" p
 Custom Python-evaluated input problems can include the following:
 
 * :ref:`Chemical Equation`
-* :ref:`Custom JavaScript Display and Grading`
+* :ref:`Custom JavaScript`
 * :ref:`Custom Python Evaluated Input`
 * :ref:`Gene Explorer`
 * :ref:`Molecule Editor`
@@ -36,8 +34,9 @@ You can create one of these problems in :ref:`Answer Tag Format` or :ref:`Script
 
 .. _Answer Tag Format:
 
+**************************
 Answer Tag Format
-~~~~~~~~~~~~~~~~~
+**************************
 
 The answer tag format encloses the Python script in an ``<answer>`` tag:
 
@@ -63,8 +62,9 @@ The Python script interacts with these variables in the global context:
 * ``messages``: An ordered list of messages that appear under each response field in the problem. You can use this to provide hints to users. For example, if you include ``messages[0] = "The capital of California is Sacramento"``, that message appears under the first response field in the problem.
 * ``overall_message``: A message that appears beneath the entire problem. You can use this to provide a hint that applies to the entire problem rather than a particular response field.
 
+========================================================================
 Create a Custom Python-Evaluated Input Problem in Answer Tag Format
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+========================================================================
 
 To create a custom Python-evaluated input problem using an ``<answer>`` tag:
 
@@ -99,8 +99,9 @@ To create a custom Python-evaluated input problem using an ``<answer>`` tag:
 
 .. _Script Tag Format:
 
+**************************
 Script Tag Format
-~~~~~~~~~~~~~~~~~
+**************************
 
 The script tag format encloses a Python script that contains a "check function" in a ``<script>`` tag, and adds the ``cfn`` attribute of the ``<customresponse>`` tag to reference that function:
 
@@ -176,9 +177,9 @@ Example of a checking function:
 
 The function checks that the user entered ``1`` for the first input, ``2`` for the  second input, and ``3`` for the third input. It provides feedback messages for each individual input, as well as a message displayed beneath the entire problem.
 
-
+========================================================================
 Create a Custom Python-Evaluated Input Problem in Script Tag Format
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+========================================================================
 
 To create a custom Python-evaluated input problem using a ``<script>`` tag:
 
