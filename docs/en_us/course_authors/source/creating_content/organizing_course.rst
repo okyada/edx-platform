@@ -312,11 +312,10 @@ Components that Contain Other Components
 ******************************************
 
 You can configure your course content so that components contain other
-components.  Some examples of when you would need to do this is for conditional
-content or A/B tests.  See :ref:`Setting Up A/B Tests` for more information.
+components.  For example, if you want to include conditional components or A/B tests, you have to create components inside components. See :ref:`Setting Up A/B Tests` for more information.
 
-The component that contains other components is referred to as the parent; the
-contained components are referred to as children.
+The component that contains other components is referred to as the *parent*; the
+contained components are *referred to as *children*.
 
 In the unit page, a parent component appears with the display name and a **VIEW** link. For example:
 
@@ -337,9 +336,7 @@ Click the arrow next to a child component name to collapse it and hide the compo
 
 Click the arrow again to expand the component.
 
-.. note:: In this release, you cannot create parent and child components in
- Studio. You set up components and their relationships to each other in XML.
- After you import the course into Studio, you can work with child components just as you can with any other component, if the containing unit is Private or in draft. 
+.. note:: In this release, you cannot create parent and child components in Studio. You must export the course and set up components and their relationships in the course XML files outside of Studio. After you import the course into Studio, you can work with child components just as you can with any other component, if the containing unit is Private or in draft. 
 
 See:
 
@@ -354,8 +351,11 @@ XML for Parent and Child Components
 ======================================
 
 You develop parent and child components in XML, then import the XML course into
-Studio to verify that the structure is as you intended. The following examples
-show the XML used to create the unit and components shown in Studio above.
+Studio to verify that the structure is as you intended. 
+
+For more information about working with your course's XML files, including information about terminology, see the `edX XML Tutorial <http://edx.readthedocs.org/projects/devdata/en/latest/course_data_formats/course_xml.html>`_.
+
+The following examples show the XML used to create the unit and components shown in Studio above.
 
 The XML for the unit is:
 

@@ -75,7 +75,7 @@ For example, the following unit page contains just one component, which is the A
 .. image:: ../Images/a-b-test-studio_unit_page.png
  :alt: Image of a unit page in Studio and an A/B test component
 
-You see the A/B test's child components by clicking the arrow in the link above.  A read-only page then shows all the components in the A/B test:
+You see the A/B test's child components by clicking **View** in the image above.  A read-only page then shows all the components in the A/B test:
 
 .. image:: ../Images/a_b_test_children.png
  :alt: Image of the A/B test child components
@@ -150,19 +150,34 @@ The following is an example JSON object that defines two experiments, the first 
                                      "version": 1},
                                     {"id": 3,
                                      "name": "Group D",
+                                     "version": 1}
+                                     {"id": 4,
+                                     "name": "Group E",
                                      "version": 1}]}]
 
 ++++++++++++++++++++++++++++++++++++++++++
-Modify the A/B Test Policy
+Modify Experiments in the A/B Test Policy
 ++++++++++++++++++++++++++++++++++++++++++
+
+After a course has started, do not delete experiments in the A/B test policy file.
+
+You can add experiments at any time.
+
+.. warning:: Do not change the ``id`` value of experiments after a course starts.
+
+++++++++++++++++++++++++++++++++++++++++++
+Modify Groups in the A/B Test Policy
+++++++++++++++++++++++++++++++++++++++++++
+
+Once a student is assigned to a group, the students stays in that group for all experiments that use that group. For example, students in Group A for one experiment will be in Group A for other experiments that use that group.
 
 After a course has started, you may find that students in a specific group are having a problem or a poor experience. In this situation, you can remove the group from the experiment in the policy file. Content that was specified for that group is then no longer part of the course.
 
-Students in the removed group are reassigned to another group. Those students will lose any progress they made on graded problems that were part of the experiment for that group.
+Students in the removed group are reassigned to another group. Any problems that these students completed in the removed group do not count toward the students' grades. The students must begin the problem set again and complete all the problems in the group to which they've been reassigned.
 
 Removing a group impacts the course event data. Ensure that researchers evaluating your course results are aware of the group you removed and the date.
 
-.. warning:: Do not change the ``id`` value of experiments or groups after a course starts.
+.. warning:: Do not change the ``id`` value of groups after a course starts.
 
 
 .. _Configure the A/B Test in XML:
@@ -173,7 +188,7 @@ Configure the A/B Test in XML
 
 You work with multiple XML files to configure an A/B test in your course. This section steps through the files involved in an A/B test that shows different content to two different groups of students.
 
-For information about XML courses, see the `edX XML Tutorial <http://edx.readthedocs.org/projects/devdata/en/latest/course_data_formats/course_xml.html>`_.
+For more information about working with your course's XML files, including information about terminology, see the `edX XML Tutorial <http://edx.readthedocs.org/projects/devdata/en/latest/course_data_formats/course_xml.html>`_.
 
 ++++++++++++++++++++++++++++++++++++++++++++++
 Define the A/B Test in the Sequential File
@@ -199,7 +214,7 @@ Define the A/B Test Content in the Split Test File
 
 After you define the A/B test in the sequential file, you define the course content you want to test in the file in the ``split_test`` directory. This is the file referenced in the ``<split_test>`` element in the sequential file, as shown above.
 
-In the A/B test file, you add elements for the A/B test content. For this example, you add two elements to compare the two different video files.
+In the A/`B test file, you add elements for the A/B test content. For this example, you add two `<vertical>`` elements to compare the two different sets of content.
 
 .. code-block:: xml
 
