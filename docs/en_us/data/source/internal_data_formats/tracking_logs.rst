@@ -337,11 +337,13 @@ PDF Interaction Event Types
 ``book``
 ----------
 
-The ``book``  event type fires when a user navigates within a PDF file.  
+The ``book`` event type fires when a user navigates within a PDF file.  
 
 **Component**: PDF Viewer 
 
 **Event Source**: Browser
+
+**History**: This event type changed on 16 Apr 2014 to include the ``name`` and ``chapter`` fields.
 
 ``event`` **Fields**: 
 
@@ -349,15 +351,21 @@ The ``book``  event type fires when a user navigates within a PDF file.
 | Field       | Type    | Details                                                                          |
 +=============+=========+==================================================================================+
 | ``type``    | string  | 'gotopage' fires when a page loads after the student manually enters its number. |
+|             |         +----------------------------------------------------------------------------------+
 |             |         | 'prevpage' fires when the next page button is clicked.                           |
+|             |         +----------------------------------------------------------------------------------+
 |             |         | 'nextpage' fires when the previous page button is clicked.                       |
 +-------------+---------+----------------------------------------------------------------------------------+
-| ``name``    | string  | For 'gotopage', set to textbook.pdf.page.loaded.                                 |
-|             |         | For 'prevpage', set to textbook.pdf.page.navigatedprevious.                      |
-|             |         | For 'nextpage', set to textbook.pdf.page.navigatednext.                          |
+| ``name``    | string  | For 'gotopage', set to ``textbook.pdf.page.loaded``.                             |
+|             |         +----------------------------------------------------------------------------------+
+|             |         | For 'prevpage', set to ``textbook.pdf.page.navigatedprevious``.                  |
+|             |         +----------------------------------------------------------------------------------+
+|             |         | For 'nextpage', set to ``textbook.pdf.page.navigatednext``.                      |
+|             |         +----------------------------------------------------------------------------------+
 |             |         | **History**: Added 16 Apr 2014                                                   |
 +-------------+---------+----------------------------------------------------------------------------------+
 | ``chapter`` | string  | The name of the PDF file.                                                        |
+|             |         +----------------------------------------------------------------------------------+
 |             |         | **History**: Added 16 Apr 2014                                                   |
 +-------------+---------+----------------------------------------------------------------------------------+
 | ``old``     | integer | The original page number. Applies to 'gotopage' event types only.                |
@@ -383,7 +391,7 @@ on the icon to show or hide page thumbnails.
 +-------------+---------+---------------------------------------------------------------------+
 | Field       | Type    | Details                                                             |
 +=============+=========+=====================================================================+
-| ``name``    | string  | textbook.pdf.thumbnails.toggled                                     |
+| ``name``    | string  | ``textbook.pdf.thumbnails.toggled``                                 |
 +-------------+---------+---------------------------------------------------------------------+
 | ``chapter`` | string  | The name of the PDF file.                                           |
 +-------------+---------+---------------------------------------------------------------------+
@@ -408,7 +416,7 @@ on a thumbnail image to navigate to a page.
 +---------------------+---------+-------------------------------------------------+
 | Field               | Type    | Details                                         |
 +=====================+=========+=================================================+
-| ``name``            | string  | textbook.pdf.thumbnail.navigated                |
+| ``name``            | string  | ``textbook.pdf.thumbnail.navigated``            |
 +---------------------+---------+-------------------------------------------------+
 | ``chapter``         | string  | The name of the PDF file.                       |
 +---------------------+---------+-------------------------------------------------+
@@ -436,7 +444,7 @@ outline icon to show or hide a list of the book's chapters.
 +-------------+---------+---------------------------------------------------------------------+
 | Field       | Type    | Details                                                             |
 +=============+=========+=====================================================================+
-| ``name``    | string  | textbook.pdf.outline.toggled                                        |
+| ``name``    | string  | ``textbook.pdf.outline.toggled``                                    |
 +-------------+---------+---------------------------------------------------------------------+
 | ``chapter`` | string  | The name of the PDF file.                                           |
 +-------------+---------+---------------------------------------------------------------------+
@@ -461,7 +469,7 @@ a link in the outline to navigate to a chapter.
 +-------------------+---------+-------------------------------------------------+
 | Field             | Type    | Details                                         |
 +===================+=========+=================================================+
-| ``name``          | string  | textbook.pdf.chapter.navigated                  |
+| ``name``          | string  | ``textbook.pdf.chapter.navigated``              |
 +-------------------+---------+-------------------------------------------------+
 | ``chapter``       | string  | The name of the PDF file.                       |
 +-------------------+---------+-------------------------------------------------+
@@ -485,15 +493,15 @@ The ``textbook.pdf.page.navigated`` event type fires when a user manually enters
 
 ``event`` **Fields**: 
 
-+-------------+---------+-----------------------------+
-| Field       | Type    | Details                     |
-+=============+=========+=============================+
-| ``name``    | string  | textbook.pdf.page.navigated |
-+-------------+---------+-----------------------------+
-| ``chapter`` | string  | The name of the PDF file.   |
-+-------------+---------+-----------------------------+
-| ``page``    | integer | Destination page number.    |
-+-------------+---------+-----------------------------+
++-------------+---------+---------------------------------+
+| Field       | Type    | Details                         |
++=============+=========+=================================+
+| ``name``    | string  | ``textbook.pdf.page.navigated`` |
++-------------+---------+---------------------------------+
+| ``chapter`` | string  | The name of the PDF file.       |
++-------------+---------+---------------------------------+
+| ``page``    | integer | Destination page number.        |
++-------------+---------+---------------------------------+
 
 --------------------------------------
 ``textbook.pdf.zoom.buttons.changed``
@@ -512,7 +520,7 @@ The ``textbook.pdf.zoom.buttons.changed`` event type fires when a user clicks ei
 +---------------+---------+--------------------------------------------------------------------+
 | Field         | Type    | Details                                                            |
 +===============+=========+====================================================================+
-| ``name``      | string  | textbook.pdf.zoom.buttons.changed                                  |
+| ``name``      | string  | ``textbook.pdf.zoom.buttons.changed``                              |
 +---------------+---------+--------------------------------------------------------------------+
 | ``direction`` | string  | 'in', 'out'                                                        |
 +---------------+---------+--------------------------------------------------------------------+
@@ -538,7 +546,7 @@ The ``textbook.pdf.zoom.menu.changed`` event type fires when a user selects a ma
 +-------------+---------+--------------------------------------------------------------------------------+
 | Field       | Type    | Details                                                                        |
 +=============+=========+================================================================================+
-| ``name``    | string  | textbook.pdf.zoom.menu.changed                                                 |
+| ``name``    | string  | ``textbook.pdf.zoom.menu.changed``                                             |
 +-------------+---------+--------------------------------------------------------------------------------+
 | ``amount``  | string  | '1', '0.75', '1.5', 'custom', 'page_actual', 'auto', 'page_width', 'page_fit'. |
 +-------------+---------+--------------------------------------------------------------------------------+
@@ -566,7 +574,7 @@ magnification setting from the zoom menu or resizes the browser window.
 +-------------+---------+-------------------------------------------------------------------+
 | Field       | Type    | Details                                                           |
 +=============+=========+===================================================================+
-| ``name``    | string  | textbook.pdf.display.scaled                                       |
+| ``name``    | string  | ``textbook.pdf.display.scaled``                                   |
 +-------------+---------+-------------------------------------------------------------------+
 | ``amount``  | string  | The magnification setting; for example, 0.95 or 1.25.             |
 +-------------+---------+-------------------------------------------------------------------+
@@ -593,7 +601,7 @@ page changes while a user scrolls up or down.
 +---------------+---------+---------------------------------------------------------------------+
 | Field         | Type    | Details                                                             |
 +===============+=========+=====================================================================+
-| ``name``      | string  | textbook.pdf.display.scrolled                                       |
+| ``name``      | string  | ``textbook.pdf.display.scrolled``                                   |
 +---------------+---------+---------------------------------------------------------------------+
 | ``chapter``   | string  | The name of the PDF file.                                           |
 +---------------+---------+---------------------------------------------------------------------+
@@ -606,10 +614,11 @@ page changes while a user scrolls up or down.
 ``textbook.pdf.search.executed``
 ------------------------------------
 
-The ``textbook.pdf.search.executed`` event type fires when a user searches
-for a text value in the file. To reduce the number of events produced, a search
-string is defined as the set of characters consecutively entered in the search
-field in up to 500ms, rather than one event per entered character.
+The ``textbook.pdf.search.executed`` event type fires when a user searches for a
+text value in the file. To reduce the number of events produced, instead of
+producing one event per entered character this event type defines a search
+string as the set of characters that are consecutively entered in the search
+field within 500ms of each other.
 
 **Component**: PDF Viewer 
 
@@ -622,7 +631,7 @@ field in up to 500ms, rather than one event per entered character.
 +-------------------+---------+---------------------------------------------------------------------------+
 | Field             | Type    | Details                                                                   |
 +===================+=========+===========================================================================+
-| ``name``          | string  | textbook.pdf.search.executed                                              |
+| ``name``          | string  | ``textbook.pdf.search.executed``                                          |
 +-------------------+---------+---------------------------------------------------------------------------+
 | ``query``         | string  | The value in the search field.                                            |
 +-------------------+---------+---------------------------------------------------------------------------+
@@ -661,7 +670,7 @@ on the Find Next or Find Previous icons for an entered search string.
 +-------------------+---------+---------------------------------------------------------------------------+
 | Field             | Type    | Details                                                                   |
 +===================+=========+===========================================================================+
-| ``name``          | string  | textbook.pdf.search.navigatednext                                         |
+| ``name``          | string  | ``textbook.pdf.search.navigatednext``                                     |
 +-------------------+---------+---------------------------------------------------------------------------+
 | ``findprevious``  | string  | 'True' if the user clicks the Find Previous icon, 'False' if the          |
 |                   |         | user clicks the Find Next icon. **.. or should this be 0 and 1?**         |
@@ -701,7 +710,7 @@ selects or clears the **Highlight All** option for a search.
 +-------------------+---------+------------------------------------------------------------------------+
 | Field             | Type    | Details                                                                |
 +===================+=========+========================================================================+
-| ``name``          | string  | textbook.pdf.search.highlight.toggled                                  |
+| ``name``          | string  | ``textbook.pdf.search.highlight.toggled``                              |
 +-------------------+---------+------------------------------------------------------------------------+
 | ``query``         | string  | The value in the search field.                                         |
 +-------------------+---------+------------------------------------------------------------------------+
@@ -738,9 +747,9 @@ user selects or clears the **Match Case** option for a search.
 +-------------------+---------+---------------------------------------------------------------------------+
 | Field             | Type    | Details                                                                   |
 +===================+=========+===========================================================================+
-| ``name``          | string  | textbook.pdf.search.casesensitivity.toggled                               |
+| ``name``          | string  | ``textbook.pdf.search.casesensitivity.toggled``                           |
 +-------------------+---------+---------------------------------------------------------------------------+
-| ``findprevious``  | string  |**.. Is this really valid for this particular event type?**                |
+| ``findprevious``  | string  | **.. Is this really valid for this particular event type?**               |
 |                   |         | 'True' if the user clicks the Find Previous icon, 'False' if the          |
 |                   |         | user clicks the Find Next icon. **.. or should this be 0 and 1?**         |
 +-------------------+---------+---------------------------------------------------------------------------+
