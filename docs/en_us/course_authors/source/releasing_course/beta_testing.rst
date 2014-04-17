@@ -207,7 +207,7 @@ If you have a number of beta testers that you want to add, you can use a "batch 
 
 To use this feature:
 
-* You need the email address of each beta tester. 
+* You need the email address or username of each beta tester. 
 
 * Each beta tester must register and activate a user account for that email address. 
 
@@ -219,7 +219,7 @@ To add multiple beta testers:
 
 #. Click **Membership**. 
 
-#. In the **Batch Beta Testers** section of the page, enter one or more addresses separated by commas or line feeds (the Enter key). You can also copy data from a CSV file of email addresses and paste it here. 
+#. In the **Batch Beta Tester Addition** section of the page, enter one or more addresses or usernames separated by commas or line feeds (the Enter key). You can also copy data from a CSV file of email addresses and paste it here. 
 
 #. Optionally, check the **Notify users by email** checkbox to send an email message to the beta testers. The text of the message is:
 
