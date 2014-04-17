@@ -39,6 +39,7 @@ graded status as'status'
 # makes sense, but a bunch of problems have markup that assumes block.  Bigger TODO: figure out a
 # general css and layout strategy for capa, document it, then implement it.
 
+import time
 import json
 import logging
 from lxml import etree
@@ -821,6 +822,13 @@ class MatlabInput(CodeInput):
             self.status = 'queued'
             self.queue_len = 1
             self.msg = self.submitted_msg
+            # Handle situation if no response from xqueue arrived during specified time.
+            if time.time() - self.input_state['queuetime'] > 35:
+                self.queue_len = 0
+                self.status = 'incomplete'
+                self.msg = 'No response from xqueue.'
+
+
 
     def handle_ajax(self, dispatch, data):
         """
@@ -945,6 +953,7 @@ class MatlabInput(CodeInput):
         if error == 0:
             self.input_state['queuekey'] = queuekey
             self.input_state['queuestate'] = 'queued'
+            self.input_state['queuetime'] = time.time()
 
         return {'success': error == 0, 'message': msg}
 
