@@ -329,21 +329,28 @@ The ``speed_change_video`` event fires when a user selects a different playing s
 
 .. _pdf:
 
-==============================
-PDF Interaction Event Types   
-==============================
+=================================
+Textbook Interaction Event Types   
+=================================
 
 ----------
 ``book``
 ----------
 
-The ``book`` event type fires when a user navigates within a PDF file.  
+The ``book`` event type fires when a user navigates within the PDF Viewer or the
+PNG Viewer.
 
-**Component**: PDF Viewer 
+* For textbooks in PDF format, the URL in the common ``page`` field contains
+  '/pdfbook/'.
+* For textbooks in PNG format, the URL in the common ``page`` field contains
+  '/book/'.
+
+**Component**: PDF Viewer, PNG Viewer 
 
 **Event Source**: Browser
 
-**History**: This event type changed on 16 Apr 2014 to include the ``name`` and ``chapter`` fields.
+**History**: This event type changed on 16 Apr 2014 to include the ``name`` and
+``chapter`` fields.
 
 ``event`` **Fields**: 
 
@@ -362,11 +369,11 @@ The ``book`` event type fires when a user navigates within a PDF file.
 |             |         +----------------------------------------------------------------------------------+
 |             |         | For 'nextpage', set to ``textbook.pdf.page.navigatednext``.                      |
 |             |         +----------------------------------------------------------------------------------+
-|             |         | **History**: Added 16 Apr 2014                                                   |
+|             |         | **History**: Added for events produced by the PDF Viewer on 16 Apr 2014.         |
 +-------------+---------+----------------------------------------------------------------------------------+
 | ``chapter`` | string  | The name of the PDF file.                                                        |
 |             |         +----------------------------------------------------------------------------------+
-|             |         | **History**: Added 16 Apr 2014                                                   |
+|             |         | **History**: Added for events produced by the PDF Viewer on 16 Apr 2014.         |
 +-------------+---------+----------------------------------------------------------------------------------+
 | ``old``     | integer | The original page number. Applies to 'gotopage' event types only.                |
 +-------------+---------+----------------------------------------------------------------------------------+
@@ -483,7 +490,8 @@ a link in the outline to navigate to a chapter.
 ``textbook.pdf.page.navigated``
 ------------------------------------
 
-The ``textbook.pdf.page.navigated`` event type fires when a user manually enters a page number.  
+The ``textbook.pdf.page.navigated`` event type fires when a user manually enters
+a page number.
 
 **Component**: PDF Viewer 
 
@@ -507,7 +515,8 @@ The ``textbook.pdf.page.navigated`` event type fires when a user manually enters
 ``textbook.pdf.zoom.buttons.changed``
 --------------------------------------
 
-The ``textbook.pdf.zoom.buttons.changed`` event type fires when a user clicks either the Zoom In or Zoom Out icon.
+The ``textbook.pdf.zoom.buttons.changed`` event type fires when a user clicks
+either the Zoom In or Zoom Out icon.
 
 **Component**: PDF Viewer 
 
@@ -533,7 +542,8 @@ The ``textbook.pdf.zoom.buttons.changed`` event type fires when a user clicks ei
 ``textbook.pdf.zoom.menu.changed``
 ------------------------------------
 
-The ``textbook.pdf.zoom.menu.changed`` event type fires when a user selects a magnification setting.  
+The ``textbook.pdf.zoom.menu.changed`` event type fires when a user selects a
+magnification setting.
 
 **Component**: PDF Viewer 
 
