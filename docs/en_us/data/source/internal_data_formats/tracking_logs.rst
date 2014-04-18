@@ -638,29 +638,26 @@ field within 500ms of each other.
 
 ``event`` **Fields**: 
 
-+-------------------+---------+---------------------------------------------------------------------------+
-| Field             | Type    | Details                                                                   |
-+===================+=========+===========================================================================+
-| ``name``          | string  | ``textbook.pdf.search.executed``                                          |
-+-------------------+---------+---------------------------------------------------------------------------+
-| ``query``         | string  | The value in the search field.                                            |
-+-------------------+---------+---------------------------------------------------------------------------+
-| ``caseSensitive`` | string  | 'True' if the case sensitive option is selected,                          |
-|                   |         | 'False' if this option is not selected. **.. or should this be 0 and 1?** |
-+-------------------+---------+---------------------------------------------------------------------------+
-| ``highlightAll``  | string  | 'True' if the option to highlight all matches is selected,                |
-|                   |         | 'False' if this option is not selected. **.. or should this be 0 and 1?** |
-+-------------------+---------+---------------------------------------------------------------------------+
-| ``status``        | string  | A "not found" status phrase for a search string that is unsuccessful.     |
-|                   |         | Blank for successful search strings.                                      |
-+-------------------+---------+---------------------------------------------------------------------------+
-| ``chapter``       | string  | The name of the PDF file.                                                 |
-+-------------------+---------+---------------------------------------------------------------------------+
-| ``page``          | integer | The number of the page that is open when the search takes place.          |
-|                   |         | .. OR should this be "For a successful search, the number of the page     |
-|                   |         | where the first match is found. For an unsuccessful search, the page      |
-|                   |         | that is open when the search takes place."                                |
-+-------------------+---------+---------------------------------------------------------------------------+
++-------------------+---------+------------------------------------------------------------------+
+| Field             | Type    | Details                                                          |
++===================+=========+==================================================================+
+| ``name``          | string  | ``textbook.pdf.search.executed``                                 |
++-------------------+---------+------------------------------------------------------------------+
+| ``query``         | string  | The value in the search field.                                   |
++-------------------+---------+------------------------------------------------------------------+
+| ``caseSensitive`` | boolean | 'true' if the case sensitive option is selected,                 |
+|                   |         | 'false' if this option is not selected.                          |
++-------------------+---------+------------------------------------------------------------------+
+| ``highlightAll``  | boolean | 'true' if the option to highlight all matches is selected,       |
+|                   |         | 'false' if this option is not selected.                          |
++-------------------+---------+------------------------------------------------------------------+
+| ``status``        | string  | A "not found" status phrase for a search string that             |
+|                   |         | is unsuccessful. Blank for successful search strings.            |
++-------------------+---------+------------------------------------------------------------------+
+| ``chapter``       | string  | The name of the PDF file.                                        |
++-------------------+---------+------------------------------------------------------------------+
+| ``page``          | integer | The number of the page that is open when the search takes place. |
++-------------------+---------+------------------------------------------------------------------+
 
 ---------------------------------------------
 ``textbook.pdf.search.navigatednext``
@@ -677,30 +674,29 @@ on the Find Next or Find Previous icons for an entered search string.
 
 ``event`` **Fields**: 
 
-+-------------------+---------+---------------------------------------------------------------------------+
-| Field             | Type    | Details                                                                   |
-+===================+=========+===========================================================================+
-| ``name``          | string  | ``textbook.pdf.search.navigatednext``                                     |
-+-------------------+---------+---------------------------------------------------------------------------+
-| ``findprevious``  | string  | 'True' if the user clicks the Find Previous icon, 'False' if the          |
-|                   |         | user clicks the Find Next icon. **.. or should this be 0 and 1?**         |
-+-------------------+---------+---------------------------------------------------------------------------+
-| ``query``         | string  | The value in the search field.                                            |
-+-------------------+---------+---------------------------------------------------------------------------+
-| ``caseSensitive`` | string  | 'True' if the case sensitive option is selected,                          |
-|                   |         | 'False' if this option is not selected. **.. or should this be 0 and 1?** |
-+-------------------+---------+---------------------------------------------------------------------------+
-| ``highlightAll``  | string  | 'True' if the option to highlight all matches is selected,                |
-|                   |         | 'False' if this option is not selected. **.. or should this be 0 and 1?** |
-+-------------------+---------+---------------------------------------------------------------------------+
-| ``status``        | string  | A "not found" status phrase for a search string that is unsuccessful.     |
-|                   |         | Blank for successful search strings.                                      |
-+-------------------+---------+---------------------------------------------------------------------------+
-| ``chapter``       | string  | The name of the PDF file.                                                 |
-+-------------------+---------+---------------------------------------------------------------------------+
-| ``page``          | integer | The number of the page that is open when the search takes place.          |
-|                   |         | .. OR see textbook.pdf.search.executed above                              |
-+-------------------+---------+---------------------------------------------------------------------------+
++-------------------+---------+------------------------------------------------------------------+
+| Field             | Type    | Details                                                          |
++===================+=========+==================================================================+
+| ``name``          | string  | ``textbook.pdf.search.navigatednext``                            |
++-------------------+---------+------------------------------------------------------------------+
+| ``findprevious``  | string  | 'true' if the user clicks the Find Previous icon, 'false'        |
+|                   |         | if the user clicks the Find Next icon.                           |
++-------------------+---------+------------------------------------------------------------------+
+| ``query``         | string  | The value in the search field.                                   |
++-------------------+---------+------------------------------------------------------------------+
+| ``caseSensitive`` | boolean | 'true' if the case sensitive option is selected,                 |
+|                   |         | 'false' if this option is not selected.                          |
++-------------------+---------+------------------------------------------------------------------+
+| ``highlightAll``  | boolean | 'true' if the option to highlight all matches is selected,       |
+|                   |         | 'false' if this option is not selected.                          |
++-------------------+---------+------------------------------------------------------------------+
+| ``status``        | string  | A "not found" status phrase for a search string that             |
+|                   |         | is unsuccessful. Blank for successful search strings.            |
++-------------------+---------+------------------------------------------------------------------+
+| ``chapter``       | string  | The name of the PDF file.                                        |
++-------------------+---------+------------------------------------------------------------------+
+| ``page``          | integer | The number of the page that is open when the search takes place. |
++-------------------+---------+------------------------------------------------------------------+
 
 ---------------------------------------------
 ``textbook.pdf.search.highlight.toggled``
@@ -717,27 +713,26 @@ selects or clears the **Highlight All** option for a search.
 
 ``event`` **Fields**: 
 
-+-------------------+---------+------------------------------------------------------------------------+
-| Field             | Type    | Details                                                                |
-+===================+=========+========================================================================+
-| ``name``          | string  | ``textbook.pdf.search.highlight.toggled``                              |
-+-------------------+---------+------------------------------------------------------------------------+
-| ``query``         | string  | The value in the search field.                                         |
-+-------------------+---------+------------------------------------------------------------------------+
-| ``caseSensitive`` | string  | 'True' if the case sensitive option is selected, 'False' if this       |
-|                   |         | option is not selected. **.. or should this be 0 and 1?**              |
-+-------------------+---------+------------------------------------------------------------------------+
-| ``highlightAll``  | string  | 'True' if the option to highlight all matches is selected,  'False' if |
-|                   |         | this option is not selected. **.. or should this be 0 and 1?**         |
-+-------------------+---------+------------------------------------------------------------------------+
-| ``status``        | string  | A "not found" status phrase for a search string that is unsuccessful.  |
-|                   |         | Blank for successful search strings.                                   |
-+-------------------+---------+------------------------------------------------------------------------+
-| ``chapter``       | string  | The name of the PDF file.                                              |
-+-------------------+---------+------------------------------------------------------------------------+
-| ``page``          | integer | The number of the page that is open when the search takes place.       |
-|                   |         | .. OR ???                                                              |
-+-------------------+---------+------------------------------------------------------------------------+
++-------------------+---------+------------------------------------------------------------------+
+| Field             | Type    | Details                                                          |
++===================+=========+==================================================================+
+| ``name``          | string  | ``textbook.pdf.search.highlight.toggled``                        |
++-------------------+---------+------------------------------------------------------------------+
+| ``query``         | string  | The value in the search field.                                   |
++-------------------+---------+------------------------------------------------------------------+
+| ``caseSensitive`` | boolean | 'true' if the case sensitive option is selected,                 |
+|                   |         | 'false' if this option is not selected.                          |
++-------------------+---------+------------------------------------------------------------------+
+| ``highlightAll``  | boolean | 'true' if the option to highlight all matches is selected,       |
+|                   |         | 'false' if this option is not selected.                          |
++-------------------+---------+------------------------------------------------------------------+
+| ``status``        | string  | A "not found" status phrase for a search string that is          |
+|                   |         | unsuccessful. Blank for successful search strings.               |
++-------------------+---------+------------------------------------------------------------------+
+| ``chapter``       | string  | The name of the PDF file.                                        |
++-------------------+---------+------------------------------------------------------------------+
+| ``page``          | integer | The number of the page that is open when the search takes place. |
++-------------------+---------+------------------------------------------------------------------+
 
 ------------------------------------------------------
 ``textbook.pdf.search.casesensitivity.toggled``
@@ -754,31 +749,26 @@ user selects or clears the **Match Case** option for a search.
 
 ``event`` **Fields**: 
 
-+-------------------+---------+---------------------------------------------------------------------------+
-| Field             | Type    | Details                                                                   |
-+===================+=========+===========================================================================+
-| ``name``          | string  | ``textbook.pdf.search.casesensitivity.toggled``                           |
-+-------------------+---------+---------------------------------------------------------------------------+
-| ``findprevious``  | string  | **.. Is this really valid for this particular event type?**               |
-|                   |         | 'True' if the user clicks the Find Previous icon, 'False' if the          |
-|                   |         | user clicks the Find Next icon. **.. or should this be 0 and 1?**         |
-+-------------------+---------+---------------------------------------------------------------------------+
-| ``query``         | string  | The value in the search field.                                            |
-+-------------------+---------+---------------------------------------------------------------------------+
-| ``caseSensitive`` | string  | 'True' if the case sensitive option is selected,                          |
-|                   |         | 'False' if this option is not selected. **.. or should this be 0 and 1?** |
-+-------------------+---------+---------------------------------------------------------------------------+
-| ``highlightAll``  | string  | 'True' if the option to highlight all matches is selected,                |
-|                   |         | 'False' if this option is not selected. **.. or should this be 0 and 1?** |
-+-------------------+---------+---------------------------------------------------------------------------+
-| ``status``        | string  | A "not found" status phrase for a search string that is unsuccessful.     |
-|                   |         | Blank for successful search strings.                                      |
-+-------------------+---------+---------------------------------------------------------------------------+
-| ``chapter``       | string  | The name of the PDF file.                                                 |
-+-------------------+---------+---------------------------------------------------------------------------+
-| ``page``          | integer | The number of the page that is open when the search takes place.          |
-|                   |         | .. OR ???                                                                 |
-+-------------------+---------+---------------------------------------------------------------------------+
++-------------------+---------+------------------------------------------------------------------+
+| Field             | Type    | Details                                                          |
++===================+=========+==================================================================+
+| ``name``          | string  | ``textbook.pdf.search.casesensitivity.toggled``                  |
++-------------------+---------+------------------------------------------------------------------+
+| ``query``         | string  | The value in the search field.                                   |
++-------------------+---------+------------------------------------------------------------------+
+| ``caseSensitive`` | boolean | 'true' if the case sensitive option is selected,                 |
+|                   |         | 'false' if this option is not selected.                          |
++-------------------+---------+------------------------------------------------------------------+
+| ``highlightAll``  | boolean | 'true' if the option to highlight all matches is selected,       |
+|                   |         | 'false' if this option is not selected.                          |
++-------------------+---------+------------------------------------------------------------------+
+| ``status``        | string  | A "not found" status phrase for a search string that             |
+|                   |         | is unsuccessful. Blank for successful search strings.            |
++-------------------+---------+------------------------------------------------------------------+
+| ``chapter``       | string  | The name of the PDF file.                                        |
++-------------------+---------+------------------------------------------------------------------+
+| ``page``          | integer | The number of the page that is open when the search takes place. |
++-------------------+---------+------------------------------------------------------------------+
 
 .. _problem:
 
