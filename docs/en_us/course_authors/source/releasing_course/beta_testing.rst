@@ -188,7 +188,9 @@ When you add beta testers, note the following.
   they are enrolled in the course, they see your course on their dashboards when they log in.
 
 * If you add beta testers before the test starts, or if they are not enrolled,
-  they do not see your course on their dashboards. You can enroll the beta testers in the course yourself, and you may want to send an email message to remind them when the test begins.
+  they do not see your course on their dashboards. You can enroll the beta
+  testers in the course yourself, and you may want to send an email message to
+  remind them when the test begins.
 
 .. _Add_Testers_Bulk:
 
@@ -223,9 +225,9 @@ To add multiple beta testers:
 
 To remove the Beta Tester role from one or more users, enter their email
 addresses in the **Batch Add Beta Testers** field and then click **Remove beta
-testers**. The user's role as a beta tester is removed; course enrollment is not affected.
+testers**. 
 
-.. note:: The **Auto Enroll** option has no effect when you click **Remove beta testers**.
+.. note:: The **Auto Enroll** option has no effect when you click **Remove beta testers**. The user's role as a beta tester is removed; course enrollment is not affected.
 
 -----------------------------
 Add Beta Testers Individually
