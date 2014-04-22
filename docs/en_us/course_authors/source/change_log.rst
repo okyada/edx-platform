@@ -10,7 +10,7 @@ Change Log
 
    * - Date
      - Change  
-   * - 4/11/14
+   * - 04/22/14
      - Expanded the :ref:`Grades` chapter to include topics on interpreting the grade reports and student progress page.
    * - 04/03/14
      - Updated the :ref:`Adding Pages to a Course` chapter to reflect ability to

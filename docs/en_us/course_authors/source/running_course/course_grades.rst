@@ -80,7 +80,7 @@ Download Grades for Enrolled Students
 
 After you request a grade report for your students, the result is a time-stamped CSV file that includes columns to identify each student: id, email, and username. It also includes a column for every assignment that is included in your grading configuration: each homework, lab, midterm, final, and any other assignment type you added to your course. 
 
-.. important:: Because this file contains data that identifies students, be sure to follow your institution's data stewardship policies when you open or save this file.
+.. important:: Because this file contains confidential, personally identifiable data which may be subject to the Family Educational Rights and Privacy Act (FERPA), be sure to follow your institution's data stewardship policies when you open or save this file.
 
 To download a file of student grades:
 
