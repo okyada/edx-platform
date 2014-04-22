@@ -524,10 +524,11 @@ class MatlabTest(unittest.TestCase):
 
             self.assertEqual(context, expected)
 
-    def test_rendering_while_queued(self):
+    @patch('capa.inputtypes.time.time', return_value=10)
+    def test_rendering_while_queued(self, time):
         state = {'value': 'print "good evening"',
                  'status': 'incomplete',
-                 'input_state': {'queuestate': 'queued'},
+                 'input_state': {'queuestate': 'queued', 'queuetime': 5},
                  }
         elt = etree.fromstring(self.xml)
 
@@ -576,9 +577,10 @@ class MatlabTest(unittest.TestCase):
         self.assertTrue('queuekey' not in self.the_input.input_state)
         self.assertTrue('queuestate' not in self.the_input.input_state)
 
-    def test_ungraded_response_success(self):
+    @patch('capa.inputtypes.time.time', return_value=10)
+    def test_ungraded_response_success(self, time):
         queuekey = 'abcd'
-        input_state = {'queuekey': queuekey, 'queuestate': 'queued'}
+        input_state = {'queuekey': queuekey, 'queuestate': 'queued', 'queuetime': 5}
         state = {'value': 'print "good evening"',
                  'status': 'incomplete',
                  'input_state': input_state,
@@ -594,9 +596,10 @@ class MatlabTest(unittest.TestCase):
         self.assertTrue(input_state['queuestate'] is None)
         self.assertEqual(input_state['queue_msg'], inner_msg)
 
-    def test_ungraded_response_key_mismatch(self):
+    @patch('capa.inputtypes.time.time', return_value=10)
+    def test_ungraded_response_key_mismatch(self, time):
         queuekey = 'abcd'
-        input_state = {'queuekey': queuekey, 'queuestate': 'queued'}
+        input_state = {'queuekey': queuekey, 'queuestate': 'queued', 'queuetime': 5}
         state = {'value': 'print "good evening"',
                  'status': 'incomplete',
                  'input_state': input_state,
@@ -651,7 +654,7 @@ class MatlabTest(unittest.TestCase):
         queue_msg = textwrap.dedent("""
     <div class='matlabResponse'><div style='white-space:pre' class='commandWindowOutput'> <strong>if</strong> Conditionally execute statements.
     The general form of the <strong>if</strong> statement is
- 
+
        <strong>if</strong> expression
          statements
        ELSEIF expression
@@ -659,11 +662,11 @@ class MatlabTest(unittest.TestCase):
        ELSE
          statements
        END
- 
-    The statements are executed if the real part of the expression 
+
+    The statements are executed if the real part of the expression
     has all non-zero elements. The ELSE and ELSEIF parts are optional.
     Zero or more ELSEIF parts can be used as well as nested <strong>if</strong>'s.
-    The expression is usually of the form expr rop expr where 
+    The expression is usually of the form expr rop expr where
     rop is ==, <, >, <=, >=, or ~=.
     <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAjAAAAGkCAIAAACgj==" />
 
@@ -675,7 +678,7 @@ class MatlabTest(unittest.TestCase):
        else
          A(I,J) = 0;
        end
- 
+
     See also <a href="matlab:help relop">relop</a>, <a href="matlab:help else">else</a>, <a href="matlab:help elseif">elseif</a>, <a href="matlab:help end">end</a>, <a href="matlab:help for">for</a>, <a href="matlab:help while">while</a>, <a href="matlab:help switch">switch</a>.
 
     Reference page in Help browser
@@ -693,7 +696,7 @@ class MatlabTest(unittest.TestCase):
         the_input = self.input_class(test_capa_system(), elt, state)
         context = the_input._get_render_context()  # pylint: disable=W0212
         self.maxDiff = None
-        expected = u'\n<div class="matlabResponse"><div class="commandWindowOutput" style="white-space: pre;"> <strong>if</strong> Conditionally execute statements.\nThe general form of the <strong>if</strong> statement is\n\n   <strong>if</strong> expression\n     statements\n   ELSEIF expression\n     statements\n   ELSE\n     statements\n   END\n\nThe statements are executed if the real part of the expression \nhas all non-zero elements. The ELSE and ELSEIF parts are optional.\nZero or more ELSEIF parts can be used as well as nested <strong>if</strong>\'s.\nThe expression is usually of the form expr rop expr where \nrop is ==, &lt;, &gt;, &lt;=, &gt;=, or ~=.\n<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAjAAAAGkCAIAAACgj==">\n\nExample\n   if I == J\n     A(I,J) = 2;\n   elseif abs(I-J) == 1\n     A(I,J) = -1;\n   else\n     A(I,J) = 0;\n   end\n\nSee also <a>relop</a>, <a>else</a>, <a>elseif</a>, <a>end</a>, <a>for</a>, <a>while</a>, <a>switch</a>.\n\nReference page in Help browser\n   <a>doc if</a>\n\n</div><ul></ul></div>\n'
+        expected = u'\n<div class="matlabResponse"><div class="commandWindowOutput" style="white-space: pre;"> <strong>if</strong> Conditionally execute statements.\nThe general form of the <strong>if</strong> statement is\n\n   <strong>if</strong> expression\n     statements\n   ELSEIF expression\n     statements\n   ELSE\n     statements\n   END\n\nThe statements are executed if the real part of the expression\nhas all non-zero elements. The ELSE and ELSEIF parts are optional.\nZero or more ELSEIF parts can be used as well as nested <strong>if</strong>\'s.\nThe expression is usually of the form expr rop expr where\nrop is ==, &lt;, &gt;, &lt;=, &gt;=, or ~=.\n<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAjAAAAGkCAIAAACgj==">\n\nExample\n   if I == J\n     A(I,J) = 2;\n   elseif abs(I-J) == 1\n     A(I,J) = -1;\n   else\n     A(I,J) = 0;\n   end\n\nSee also <a>relop</a>, <a>else</a>, <a>elseif</a>, <a>end</a>, <a>for</a>, <a>while</a>, <a>switch</a>.\n\nReference page in Help browser\n   <a>doc if</a>\n\n</div><ul></ul></div>\n'
 
         self.assertEqual(context['queue_msg'], expected)
 
