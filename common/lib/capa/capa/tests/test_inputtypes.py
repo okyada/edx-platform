@@ -615,6 +615,29 @@ class MatlabTest(unittest.TestCase):
         self.assertEqual(input_state['queuestate'], 'queued')
         self.assertFalse('queue_msg' in input_state)
 
+    @patch('capa.inputtypes.time.time', return_value=20)
+    def test_matlab_response_timeout_exceeded(self, time):
+
+        state = {'input_state': {'queuestate': 'queued', 'queuetime': 5}}
+        elt = etree.fromstring(self.xml)
+
+        the_input = self.input_class(test_capa_system(), elt, state)
+        context = the_input._get_render_context()
+        self.assertEqual(the_input.status, 'queued')
+
+
+    @patch('capa.inputtypes.time.time', return_value=45)
+    def test_matlab_response_timeout_not_exceeded(self, time):
+
+        state = {'input_state': {'queuestate': 'queued', 'queuetime': 5}}
+        elt = etree.fromstring(self.xml)
+
+        the_input = self.input_class(test_capa_system(), elt, state)
+        context = the_input._get_render_context()
+        self.assertEqual(the_input.status, 'incomplete')
+        self.assertEqual(the_input.msg, 'No response from xqueue.')
+
+
     def test_get_html(self):
         # usual output
         output = self.the_input.get_html()
