@@ -520,9 +520,9 @@ FAVICON_PATH = 'images/favicon.ico'
 
 # Locale/Internationalization
 TIME_ZONE = 'America/New_York'  # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
-LANGUAGE_CODE = 'en'  # http://www.i18nguy.com/unicode/language-identifiers.html
+LANGUAGE_CODE = 'en@rtl'  # http://www.i18nguy.com/unicode/language-identifiers.html
 # these languages display right to left
-LANGUAGES_BIDI = ("en@rtl", "he", "ar", "fa")
+LANGUAGES_BIDI = ("en@rtl", "he", "ar", "fa", "fa-ir", "ur")
 
 # Sourced from http://www.localeplanet.com/icu/ and wikipedia
 # Languages that don't have any reviewed strings are commented out;
@@ -556,12 +556,12 @@ LANGUAGES = (
 #    ('es-us', u'Español (Estados Unidos)'),  # Spanish (United States)
 #    ('et-ee', u'Eesti (Eesti)'),  # Estonian (Estonia)
 #    ('eu-es', u'euskara (Espainia)'),  # Basque (Spain)
-#    ('fa', u'فارسی'),  # Persian
-#    ('fa-ir', u'فارسی (ایران)'),  # Persian (Iran)
+    ('fa', u'فارسی'),  # Persian
+    ('fa-ir', u'فارسی (ایران)'),  # Persian (Iran)
 #    ('fi-fi', u'Suomi (Suomi)'),  # Finnish (Finland)
     ('fr', u'Français'),  # French
 #    ('gl', u'Galego'),  # Galician
-#    ('he', u'עברית'),  # Hebrew
+    ('he', u'עברית'),  # Hebrew
     ('hi', u'हिन्दी'),  # Hindi
 #    ('hu', u'magyar'),  # Hungarian
     ('hy-am', u'Հայերէն (Հայաստանի Հանրապետութիւն)'),  # Armenian (Armenia)
@@ -588,7 +588,7 @@ LANGUAGES = (
 #    ('th', u'ไทย'),  # Thai
     ('tr-tr', u'Türkçe (Türkiye)'),  # Turkish (Turkey)
     ('uk', u'Українська'),  # Ukranian
-#    ('ur', u'اردو'),  # Urdu
+    ('ur', u'اردو'),  # Urdu
     ('vi', u'Tiếng Việt'),  # Vietnamese
     ('zh-cn', u'中文(简体)'),  # Chinese (China)
     ('zh-tw', u'中文(台灣)'),  # Chinese (Taiwan)
