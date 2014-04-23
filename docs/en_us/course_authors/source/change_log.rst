@@ -11,7 +11,9 @@ April, 2014
    :header-rows: 1
 
    * - Date
-     - Change  
+     - Change
+   * - 04/23/14
+     - Added more information about collecting language and location data from students to :ref:`Student Data`.  
    * - 04/22/14
      - Updated the :ref:`Bulk Email` section with information about the dashboard option to opt out of course email. 
    * - 
