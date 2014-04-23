@@ -618,7 +618,7 @@ class MatlabTest(unittest.TestCase):
         self.assertFalse('queue_msg' in input_state)
 
     @patch('capa.inputtypes.time.time', return_value=20)
-    def test_matlab_response_timeout_exceeded(self, time):
+    def test_matlab_response_timeout_not_exceeded(self, time):
 
         state = {'input_state': {'queuestate': 'queued', 'queuetime': 5}}
         elt = etree.fromstring(self.xml)
@@ -629,14 +629,14 @@ class MatlabTest(unittest.TestCase):
 
 
     @patch('capa.inputtypes.time.time', return_value=45)
-    def test_matlab_response_timeout_not_exceeded(self, time):
+    def test_matlab_response_timeout_exceeded(self, time):
 
         state = {'input_state': {'queuestate': 'queued', 'queuetime': 5}}
         elt = etree.fromstring(self.xml)
 
         the_input = self.input_class(test_capa_system(), elt, state)
         context = the_input._get_render_context()
-        self.assertEqual(the_input.status, 'incomplete')
+        self.assertEqual(the_input.status, 'unsubmitted')
         self.assertEqual(the_input.msg, 'No response from Xqueue within {} seconds. Aborted.'.format(XQUEUE_TIMEOUT))
 
 

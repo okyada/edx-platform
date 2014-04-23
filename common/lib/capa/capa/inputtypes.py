@@ -826,7 +826,7 @@ class MatlabInput(CodeInput):
             # Handle situation if no response from xqueue arrived during specified time.
             if time.time() - self.input_state['queuetime'] > XQUEUE_TIMEOUT:
                 self.queue_len = 0
-                self.status = 'incomplete'
+                self.status = 'unsubmitted'
                 self.msg = 'No response from Xqueue within {} seconds. Aborted.'.format(XQUEUE_TIMEOUT)
 
 
