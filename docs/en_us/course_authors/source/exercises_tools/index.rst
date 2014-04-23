@@ -1,8 +1,8 @@
 .. _Exercises and Tools Index:
 
-##########################
-Exercises and Tools
-##########################
+############################
+Creating Exercises and Tools
+############################
 
 .. toctree::
    :maxdepth: 2

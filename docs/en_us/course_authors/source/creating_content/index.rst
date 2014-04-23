@@ -18,5 +18,4 @@ Creating Course Content
    create_video
    create_discussion
    create_problem
-   exercises_tools/index
 

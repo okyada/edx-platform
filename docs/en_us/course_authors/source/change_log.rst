@@ -9,7 +9,9 @@ Change Log
    :header-rows: 1
 
    * - Date
-     - Change  
+     - Change
+   * - 4/23/14
+     - Reorganized info about problems into :ref:`Exercises and Tools Index` section  
    * - 4/7/14
      - Expanded the :ref:`Course Data`, :ref:`Enrollment`, and :ref:`Course_Staffing` sections.
    * - 04/03/14
@@ -47,7 +49,7 @@ Change Log
 
        * :ref:`Creating Course Content Index`
 
-       * :ref:`Working with Problems Index`
+       * :ref:`Exercises and Tools Index`
 
        * :ref:`Releasing Your Course Index`
 

@@ -4,11 +4,15 @@
 Creating Exercises and Tools
 ############################
 
+************************************
+Introduction to  Exercises and Tools
+************************************
+
 Studio allows you to create a wide variety of exercises and tools for your course. Many of these exercises and tools have templates in Studio so that you can create them easily. In addition, individual course teams frequently create exercises that don't have templates in Studio. We're striving to make these tools available to all our course teams as well, and we have instructions for creating some of them in this section. 
 
 Depending on the exercise or tool, you'll use an HTML, Problem, or Advanced component. The page for each individual exercise or tool contains an example of each exercise or tool, together with all the files, code, and step-by-step instructions that you need to create the exercise or tool. 
 
-.. note:: All problems must include labels for accessibility. The label generally includes the text of the main question in your problem. Instructions for adding labels appear in the page for each individual problem.
+.. note:: Problems must include labels for accessibility. The label generally includes the text of the main question in your problem. Instructions for adding labels appear in the page for each individual problem.
 
 ****************************
 General Exercises and Tools
@@ -41,7 +45,7 @@ General Exercises and Tools
           :width: 100
           :alt: Google Hangout
      - :ref:`Google Instant Hangout`
-     - You can add the ability for students to participate in instant hangouts directly from your course. With instant hangouts, students cani nteract through live video and voice, share screens and watch videos together, and collaborate on documents. 
+     - You can add the ability for students to participate in instant hangouts directly from your course. With instant hangouts, students can interact through live video and voice, share screens and watch videos together, and collaborate on documents. 
    * - .. image:: /Images/LTIExample.png
           :width: 100
           :alt: Example LTI component
