@@ -54,6 +54,7 @@ from .registry import TagRegistry
 from chem import chemcalc
 from calc.preview import latex_preview
 import xqueue_interface
+from xqueue_interface import XQUEUE_TIMEOUT
 from datetime import datetime
 from xmodule.stringify import stringify_children
 
@@ -823,10 +824,10 @@ class MatlabInput(CodeInput):
             self.queue_len = 1
             self.msg = self.submitted_msg
             # Handle situation if no response from xqueue arrived during specified time.
-            if time.time() - self.input_state['queuetime'] > 35:
+            if time.time() - self.input_state['queuetime'] > XQUEUE_TIMEOUT:
                 self.queue_len = 0
                 self.status = 'incomplete'
-                self.msg = 'No response from xqueue.'
+                self.msg = 'No response from Xqueue within {} seconds. Aborted.'.format(XQUEUE_TIMEOUT)
 
 
 

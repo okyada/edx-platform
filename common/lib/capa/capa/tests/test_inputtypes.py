@@ -28,6 +28,8 @@ from capa import inputtypes
 from mock import ANY, patch
 from pyparsing import ParseException
 
+from capa.xqueue_interface import XQUEUE_TIMEOUT
+
 # just a handy shortcut
 lookup_tag = inputtypes.registry.get_class_for_tag
 
@@ -635,7 +637,7 @@ class MatlabTest(unittest.TestCase):
         the_input = self.input_class(test_capa_system(), elt, state)
         context = the_input._get_render_context()
         self.assertEqual(the_input.status, 'incomplete')
-        self.assertEqual(the_input.msg, 'No response from xqueue.')
+        self.assertEqual(the_input.msg, 'No response from Xqueue within {} seconds. Aborted.'.format(XQUEUE_TIMEOUT))
 
 
     def test_get_html(self):
